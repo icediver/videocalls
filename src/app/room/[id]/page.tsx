@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   title: "Videocalls",
   ...NO_INDEX_PAGE,
 };
-export function generateStaticParams() {
-  const paths = [...Array(20)].map((_, index) => {
-    return { id: (index + 1).toString() };
-  });
-
-  return paths;
-}
+// export function generateStaticParams() {
+//   const paths = [...Array(20)].map((_, index) => {
+//     return { id: (index + 1).toString() };
+//   });
+//
+//   return paths;
+// }
 
 export default function RoomPage({ params }: { params: { id: string } }) {
   const { id } = params;
