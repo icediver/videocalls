@@ -15,23 +15,23 @@ export function Home() {
 		setIsError(false);
 	}
 	return (
-		<main className="h-screen w-screen bg-neutral-900">
-			<div className="relative top-1/2 mx-auto flex h-1/3 w-1/3 -translate-y-1/2 flex-col items-center  rounded-xl bg-zinc-800 p-6">
-				<h1 className="text-centerm my-5 text-3xl font-semibold text-slate-500">
+		<main className="h-screen w-screen">
+			<div className="relative top-1/3 mx-auto flex h-1/4 w-1/4 -translate-y-1/2 flex-col items-center justify-between rounded-xl bg-slate-900 p-6">
+				<h1 className="text-center text-3xl font-semibold text-slate-500">
 					Video Conference
 				</h1>
-				<div className="flex w-full flex-col items-center">
+				<div className="flex w-full flex-col items-center justify-evenly">
 					<div className="w-full">
 						<input
-							className="h-12 w-full rounded px-8 text-xl"
+							className="h-12 w-full rounded px-8 text-center text-xl"
 							placeholder="enter conference id"
 							value={value}
 							onChange={handleChange}
 						/>
-						<div className="my-1 h-10 w-full">
+						<div className="my-1 h-6 w-full">
 							{isError && (
 								<p className="text-orange-500">
-									Error conference id must be number
+									Error: conference id must be a number
 								</p>
 							)}
 						</div>
